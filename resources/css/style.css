@@ -1,3 +1,19 @@
 *{
-  background-color: 
+  background-color: #FBF9F8;
+}
+
+:root{
+  ---maincolor:var(#707BA2);
+  ---subcolor-light: var(#8BA2C9);
+  ---subcolor-dark: var(#707BA2);
+}
+
+nav li{
+  text-decoration: none;
+  display: inline;
+}
+
+nav a{
+  color:---maincolor;
+
 }
