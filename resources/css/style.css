@@ -1,19 +1,75 @@
 *{
+  font-family: 'Dosis', sans-serif;
+}
+html{
   background-color: #FBF9F8;
+  font-family: 'Dosis';
 }
 
 :root{
-  ---maincolor:var(#707BA2);
-  ---subcolor-light: var(#8BA2C9);
-  ---subcolor-dark: var(#707BA2);
+  --maincolor:#707BA2;
+  --subcolor-light: #8BA2C9;
+  --subcolor-dark: #707BA2;
+}
+/* header */
+header{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+select{
+  display: block;
+}
+.logo{
+  text-align: center;
+  width:75px;
+  height: auto;
 }
 
+/* nav */
 nav li{
   text-decoration: none;
   display: inline;
+  padding:0px 10px;
+}
+
+nav li::before{
+  content: " | ";
 }
 
 nav a{
-  color:---maincolor;
+  color: var(--maincolor);
+}
 
+nav a:hover{
+  color: var(--subcolor-light);
+}
+
+.active{
+  color: var(--subcolor-dark);
+  font-weight: bold;
+}
+
+/* main */
+.banner{
+  width:100%;
+}
+
+.banner img{
+  width:100%;
+}
+
+/* card */
+.container{
+  width:100%;
+}
+.card{
+  border: 1px solid var(--subcolor-dark);
+  background-color: #FBF9F8;
+}
+
+.project{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
 }
