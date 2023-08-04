@@ -2,7 +2,7 @@
   font-family: 'Dosis', sans-serif;
 }
 html{
-  background-color: #FBF9F8;
+  background-color: var(--bg-color);
   font-family: 'Dosis';
 }
 
@@ -10,6 +10,7 @@ html{
   --maincolor:#707BA2;
   --subcolor-light: #8BA2C9;
   --subcolor-dark: #707BA2;
+  --bg-color:#FBF9F8;
 }
 /* header */
 header{
@@ -31,13 +32,16 @@ nav li{
   text-decoration: none;
   display: inline;
   padding:0px 10px;
+  font-size: 1.25rem;
 }
 
-nav li::before{
-  content: " | ";
+nav li::before, nav li::after{
+  content: " || ";
+  color: var(--maincolor);
 }
 
 nav a{
+  text-decoration: none;
   color: var(--maincolor);
 }
 
@@ -60,16 +64,46 @@ nav a:hover{
 }
 
 /* card */
-.container{
+.grid{
+  display: grid;
   width:100%;
+  margin: 10px 0px;
+  grid-template: 1fr / 1fr 1fr 1fr;
+  column-gap: 10px;
+  justify-content: center;
 }
+
 .card{
-  border: 1px solid var(--subcolor-dark);
-  background-color: #FBF9F8;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--subcolor-dark);
 }
 
 .project{
   width: 50px;
   height: 50px;
   border-radius: 50px;
+  align-self: center;
+}
+.tag{
+  padding-right: 40px;
+}
+.tag li{
+  text-decoration:none;
+  background-color: var(--bg-color);
+  border-radius: 25px;
+  display: inline-block;
+  padding: 0px 15px;
+  margin: 5px 10px;
+  color:var(--maincolor);
+}
+
+/* footer */
+footer{
+  text-align: center;
+  color: var(--maincolor);
 }
